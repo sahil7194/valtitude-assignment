@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Table } from './component/Table';
+import { HrsSystem } from './component/Table';
 import { Excel } from './component/Excel';
 import Header from './component/Header';
 
@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Header/>
       <Routes>
-        <Route path="/" element={<Table />} />
+        <Route path="/" element={<HrsSystem />} />
         <Route path="/excel" element={<Excel />} />
       </Routes>
     </Router>
