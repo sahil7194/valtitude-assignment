@@ -75,18 +75,26 @@ export const Excel =() => {
     }
 
   return (
-    <div className='container ms-5 ps-3'>
-        <h1>
-            Select File
-        </h1>
-        <div>
-            <input type='file' onChange={(e) => { onFileChanged(e)}}/>
-        </div>
-     
-     <br/>
-        { chartData.length === 0 ? 'Upload file to view chart' : 
-          <LineChart chartData={chartData}/>
-        }
+    <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+  <div className="mx-auto max-w-lg text-center">
+    <h1 className="text-2xl font-bold sm:text-3xl">Export Excel Data to Line Chart</h1>
+  </div>
+
+    <div className="mx-auto mb-0 mt-8 max-w-md space-y-4">
+      <div className="relative">
+        <input
+          type="file"
+          className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+          placeholder="Enter email"
+          onChange={(e) => { onFileChanged(e)}}
+        />
+      </div>
     </div>
+    <div>
+    { chartData.length === 0 ? 'Upload file to view chart' : 
+         <LineChart chartData={chartData}/>
+       }
+    </div>
+</div>
   )
 }
