@@ -1,8 +1,8 @@
-## To start project 
+## To start a project 
 
 `npm start`
 
-## Packaages used 
+## Packages used 
 
 - XLSX 
 - tailwind css
